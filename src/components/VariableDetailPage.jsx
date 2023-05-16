@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 const VariableDetailPage = () => {
   const variableId = useParams();
@@ -47,6 +47,7 @@ const VariableDetailPage = () => {
             <h2>No name available</h2>
           )}
           <p>{variable.Description.replace(/<\/?p>/gi, "")}</p>
+          <Link to="/variables">Go Back</Link>
         </div>
       ) : (
         <p>Loading...</p>

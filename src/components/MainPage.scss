@@ -1,0 +1,70 @@
+.main {
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+
+  &__left-col {
+    width: 600px;
+    margin-right: 1em;
+  }
+
+  &__form-header {
+    margin-bottom: 2em; 
+  }
+
+  &__form-title {
+    font-size: 1.6rem;
+  }
+
+  &__form-sample {
+    font-size: 1.4rem;
+  }
+
+  &__form {
+    margin-bottom: 2em;
+
+    &-input {
+      margin-right: 5px;
+      padding: .1em;
+    }
+
+    &-button {
+      padding: 0.2em 1em;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &-error {
+      font-style: italic;
+    }
+  }
+
+  &__decrypted-title {
+    margin-bottom: .2em;
+  }
+
+  &__decrypted-list {
+    font-style: italic;
+    margin-bottom: 1em;
+  }
+
+  &__decrypted-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  &__decrypted-table-item {
+    border: 1px solid black;
+
+    td {
+      border: 1px solid black;
+      padding: .5em;
+    }
+  }
+  
+  &__history-title {
+    font-size: 1.6rem;
+  }
+}

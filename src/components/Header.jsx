@@ -1,18 +1,26 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 
+import "./Header.scss";
+
 const Header = () => {
   return (
     <>
-      <header>
-        <h1>Logo</h1>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Main Page</Link>
+      <header className="header">
+        <Link to="/" className="header__logo">
+          VIN decryptor
+        </Link>
+        <nav className="header__nav">
+          <ul className="header__nav-list">
+            <li className="header__nav-item">
+              <Link className="header__nav-link" to="/">
+                Main Page
+              </Link>
             </li>
             <li>
-              <Link to="/variables">Variables</Link>
+              <Link className="header__nav-link" to="/variables">
+                Variables
+              </Link>
             </li>
           </ul>
         </nav>
