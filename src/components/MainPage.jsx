@@ -129,7 +129,7 @@ const MainPage = () => {
           {history.map((code, index) => (
             <li className="main__history-item" key={index}>
               <button
-                className="main-history-btn"
+                className="main__history-btn"
                 onClick={() => setVinCode(code)}
               >
                 {code}

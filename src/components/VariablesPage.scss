@@ -1,0 +1,29 @@
+.variables {
+  padding: .5em 2em;
+
+  &__title {
+    text-align: center;
+    margin-bottom: .8em;
+  }
+
+  &__list {
+    text-align: center;
+  }
+
+  &__item {
+    background: rgb(248, 245, 245);
+    margin-bottom: .5em;
+
+    &:hover {
+      background: rgb(223, 215, 215);;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+    .variables__list {
+      columns: 3;
+      -webkit-columns: 3;
+      -moz-columns: 3;
+  }
+}

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import "./VariablesPage.scss";
+
 const VariablesPage = () => {
   const [variables, setVariables] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
@@ -32,14 +34,17 @@ const VariablesPage = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Variables</h1>
+    <div className="variables">
+      <h1 className="variables__title">Variables</h1>
       {errorMessage && <p>{errorMessage}</p>}
       {variables.length !== 0 ? (
-        <ul>
+        <ul className="variables__list">
           {variables.map((variable) => (
-            <li key={variable.ID}>
-              <Link to={`/variables/${variable.ID}`}>
+            <li className="variables__item" key={variable.ID}>
+              <Link
+                className="variables__link"
+                to={`/variables/${variable.ID}`}
+              >
                 {variable.GroupName ? (
                   <h3>{variable.GroupName}</h3>
                 ) : (
