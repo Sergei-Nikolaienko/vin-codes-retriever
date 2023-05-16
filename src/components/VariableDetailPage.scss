@@ -1,0 +1,28 @@
+.variable {
+  height: 100vh;
+  text-align: center;
+  padding: 1em 3em;
+
+  &__title {
+    font-size: 2.5rem;
+  }
+
+  &__text {
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 1.5em;
+  }
+
+  &__back {
+    font-size: 1.5rem;
+    color: black;
+    padding: 1em;
+    border: 1px solid black;
+    background: rgb(247, 253, 253);
+
+    &:hover {
+      color: white;
+      background: rgb(97, 171, 231);
+    }
+  }
+}

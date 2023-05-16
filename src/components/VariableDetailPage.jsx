@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 
+import "./VariableDetailPage.scss";
+
 const VariableDetailPage = () => {
   const variableId = useParams();
   const [variable, setVariable] = useState(null);
@@ -38,16 +40,20 @@ const VariableDetailPage = () => {
   }, [variableId]);
 
   return (
-    <div>
+    <div className="variable">
       {variable ? (
         <div>
           {variable.GroupName ? (
-            <h2>{variable.GroupName}</h2>
+            <h2 className="variable__title">{variable.GroupName}</h2>
           ) : (
-            <h2>No name available</h2>
+            <h2 className="variable__title">No name available</h2>
           )}
-          <p>{variable.Description.replace(/<\/?p>/gi, "")}</p>
-          <Link to="/variables">Go Back</Link>
+          <p className="variable__text">
+            {variable.Description.replace(/<\/?p>/gi, "")}
+          </p>
+          <Link className="variable__back" to="/variables">
+            Go Back
+          </Link>
         </div>
       ) : (
         <p>Loading...</p>
