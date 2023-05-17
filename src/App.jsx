@@ -1,4 +1,4 @@
-import { AppProvider } from "./components/AppContext";
+import { AppProvider } from "./AppContext";
 import Header from "./components/Header";
 import MainPage from "./components/MainPage";
 import VariablesPage from "./components/VariablesPage";
