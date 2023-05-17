@@ -71,6 +71,13 @@ const MainPage = () => {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="main">
       <div className="main__left-col">
@@ -130,7 +137,10 @@ const MainPage = () => {
             <li className="main__history-item" key={index}>
               <button
                 className="main__history-btn"
-                onClick={() => setVinCode(code)}
+                onClick={() => {
+                  setVinCode(code);
+                  scrollToTop();
+                }}
               >
                 {code}
               </button>

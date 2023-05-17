@@ -1,12 +1,6 @@
 .main {
   padding: 2em;
-  display: flex;
-  justify-content: center;
-
-  &__left-col {
-    width: 600px;
-    margin-right: 1em;
-  }
+  overflow-x: hidden;
 
   &__form-header {
     margin-bottom: 2em; 
@@ -55,6 +49,7 @@
   &__decrypted-table {
     border-collapse: collapse;
     width: 100%;
+    margin-bottom: 1em;
   }
 
   &__decrypted-table-item {
@@ -71,7 +66,19 @@
   }
 
   &__history-btn {
-    width: 200px;
+    width: 220px;
     padding: 0.2em 1em;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .main {
+    display: flex;
+    justify-content: center;
+
+    &__left-col {
+      width: 600px;
+      margin-right: 1em;
+    }
   }
 }

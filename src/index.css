@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+* {
+  font-family: Roboto, sans-serif;
+}
+
 /* Remove default margin */
 * {
   margin: 0;
@@ -35,7 +39,7 @@ body {
 body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  background: #E9F1FA;
+  background-color: #a5e2f5;
 }
 
 /* A elements that don't have a class get default styles */
